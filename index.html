@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Pré-Inscrição Escolar 2026/2027</title>
+  <title>Matrículas 2026/2027</title>
 
   <style>
     * {
@@ -14,135 +13,135 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #f4f7fb, #e8eef7);
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
       color: #1f2937;
-      min-height: 100vh;
-      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #123c69;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
     }
 
     .container {
-      max-width: 650px;
-      margin: 30px auto;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+      background: white;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
-    .header {
+    h2 {
+      margin-bottom: 15px;
+      color: #123c69;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
       text-align: center;
-      margin-bottom: 28px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
     }
 
-    .header h1 {
-      font-size: 28px;
-      color: #123b6d;
-      margin-bottom: 8px;
+    .register {
+      background: #123c69;
+      color: white;
     }
 
-    .header p {
-      color: #6b7280;
-      font-size: 15px;
-      line-height: 1.5;
+    .whatsapp {
+      background: #25D366;
+      color: white;
     }
 
     .form-group {
-      margin-bottom: 18px;
+      margin-top: 18px;
     }
 
     label {
       display: block;
       font-weight: bold;
       margin-bottom: 7px;
-      color: #374151;
-      font-size: 14px;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      padding: 13px 14px;
+      padding: 13px;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
+      border-radius: 9px;
       font-size: 15px;
-      background: #fff;
-      outline: none;
-      transition: 0.2s;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: #25d366;
-      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
+      outline: none;
+      border-color: #25D366;
     }
 
     .required {
-      color: #dc2626;
-    }
-
-    .whatsapp-button {
-      width: 100%;
-      border: none;
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 8px;
-      background: #25d366;
-      color: white;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .whatsapp-button:hover {
-      background: #1ebe5d;
-      transform: translateY(-1px);
+      color: #d00;
     }
 
     .info {
-      margin-top: 18px;
-      padding: 13px;
+      margin-top: 15px;
+      padding: 12px;
       background: #f0fdf4;
-      border-radius: 10px;
-      color: #166534;
+      border-radius: 9px;
       font-size: 13px;
-      line-height: 1.5;
-      text-align: center;
+      color: #166534;
     }
 
-    .footer {
+    footer {
       text-align: center;
-      margin-top: 18px;
-      color: #6b7280;
-      font-size: 12px;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 12px;
+      header h1 {
+        font-size: 25px;
       }
 
       .container {
-        margin: 10px auto;
+        padding: 12px;
       }
 
       .card {
-        padding: 22px 18px;
-      }
-
-      .header h1 {
-        font-size: 24px;
+        padding: 20px;
       }
     }
   </style>
@@ -150,17 +149,47 @@
 
 <body>
 
-  <div class="container">
+  <header>
+    <h1>MATRÍCULAS 2026/2027</h1>
+    <p>Inscrições abertas</p>
+  </header>
 
-    <div class="card">
+  <main class="container">
 
-      <div class="header">
-        <h1>Pré-Inscrição Escolar</h1>
-        <p>
-          Preencha os dados abaixo para enviar uma pré-inscrição
-          através do WhatsApp.
-        </p>
-      </div>
+    <section class="card">
+      <h2>Bem-vindo à nossa escola</h2>
+
+      <p>
+        Oferecemos um ambiente de aprendizagem seguro,
+        acolhedor e preparado para o desenvolvimento dos nossos alunos.
+      </p>
+
+      <a href="#pre-inscricao" class="button register">
+        FAZER PRÉ-INSCRIÇÃO
+      </a>
+
+      <a href="#pre-inscricao" class="button whatsapp">
+        FALAR NO WHATSAPP
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>Por que escolher a nossa escola?</h2>
+
+      <p>✓ Educação de qualidade</p>
+      <p>✓ Professores qualificados</p>
+      <p>✓ Ambiente seguro</p>
+      <p>✓ Instalações adequadas</p>
+    </section>
+
+    <section class="card" id="pre-inscricao">
+
+      <h2>Pré-Inscrição</h2>
+
+      <p>
+        Preencha os dados abaixo para enviar a sua
+        pré-inscrição através do WhatsApp.
+      </p>
 
       <form id="enrollmentForm">
 
@@ -168,6 +197,7 @@
           <label for="responsavel">
             Nome do Responsável <span class="required">*</span>
           </label>
+
           <input
             type="text"
             id="responsavel"
@@ -180,6 +210,7 @@
           <label for="aluno">
             Nome do Aluno <span class="required">*</span>
           </label>
+
           <input
             type="text"
             id="aluno"
@@ -192,6 +223,7 @@
           <label for="idade">
             Idade do Aluno <span class="required">*</span>
           </label>
+
           <input
             type="number"
             id="idade"
@@ -222,7 +254,7 @@
             <option value="10ª Classe">10ª Classe</option>
             <option value="11ª Classe">11ª Classe</option>
             <option value="12ª Classe">12ª Classe</option>
-      </select>
+          </select>
         </div>
 
         <div class="form-group">
@@ -262,24 +294,25 @@
           ></textarea>
         </div>
 
-        <button type="submit" class="whatsapp-button">
+        <button type="submit" class="button whatsapp">
           ENVIAR PRÉ-INSCRIÇÃO
         </button>
 
       </form>
 
       <div class="info">
-        Após clicar no botão, o WhatsApp será aberto com
-        os dados da pré-inscrição preenchidos automaticamente.
+        Ao enviar, o WhatsApp será aberto com os dados
+        da pré-inscrição preparados automaticamente.
       </div>
 
-    </div>
+    </section>
 
-    <div class="footer">
-      Pré-Inscrição Escolar 2026/2027
-    </div>
+  </main>
 
-  </div>
+  <footer>
+    <p>© 2026 Escola — Angola</p>
+    <p>Matrículas 2026/2027</p>
+  </footer>
 
   <script>
 
@@ -336,7 +369,7 @@ Mensagem adicional: ${mensagemExtra}`;
           "?text=" +
           encodeURIComponent(mensagem);
 
-        window.open(whatsappURL, "_blank");
+        window.location.href = whatsappURL;
 
       });
 
