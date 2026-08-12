@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matrículas 2026/2027</title>
+
+  <title>Complexo Escolar Privado Rosileno | Matrículas 2026/2027</title>
+
+  <meta name="description"
+        content="Complexo Escolar Privado Rosileno - Matrículas 2026/2027. Ensino primário, primeiro e segundo ciclo e cursos técnicos.">
 
   <style>
     * {
@@ -12,136 +16,521 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
     header {
-      background: #123c69;
+      background: linear-gradient(135deg, #092c55, #155da8);
       color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+      border: 2px solid white;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.8;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 35px 20px;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(4,29,56,0.72), rgba(4,29,56,0.72)),
+        url("IMG_20260812_175351_586.jpg") center/cover no-repeat;
+      color: white;
     }
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
+    .hero-content {
+      max-width: 900px;
     }
 
-    header p {
-      font-size: 17px;
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+      margin-bottom: 20px;
+      border: 3px solid white;
     }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #123c69;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    /* GENERAL */
 
     .container {
-      max-width: 700px;
+      max-width: 1150px;
       margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #123c69;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #64748b;
+      max-width: 750px;
+      margin: 0 auto 40px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .about-text h3 {
+      color: #123c69;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      margin-top: 20px;
       padding: 20px;
+      border-left: 5px solid #25d366;
+      background: #f1f8f4;
+      font-style: italic;
+      color: #234;
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .card {
       background: white;
-      margin-top: 20px;
-      padding: 25px;
+      padding: 28px;
       border-radius: 16px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
     }
 
-    h2 {
-      margin-bottom: 15px;
+    .card-icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
       color: #123c69;
+      margin-bottom: 10px;
     }
 
-    .button {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 10px;
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin: 7px 0;
+    }
+
+    /* COURSES */
+
+    .courses {
+      background: #eef4fa;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .course-card h3 {
+      color: #123c69;
+      margin-bottom: 15px;
+    }
+
+    .course-card li {
+      margin: 8px 0;
+    }
+
+    /* INFO */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
       text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
-      border: none;
+    }
+
+    .info-box strong {
+      display: block;
+      color: #123c69;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 13px;
+      transition: 0.25s;
       cursor: pointer;
     }
 
-    .register {
-      background: #123c69;
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* PRE-REGISTRATION */
+
+    .registration {
+      background: linear-gradient(135deg, #092c55, #155da8);
       color: white;
     }
 
-    .whatsapp {
-      background: #25D366;
+    .registration .section-title {
       color: white;
     }
 
-    .form-group {
-      margin-top: 18px;
+    .registration .section-subtitle {
+      color: #dbeafe;
     }
 
-    label {
-      display: block;
+    .form {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      color: #172033;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
       font-weight: bold;
       margin-bottom: 7px;
+      color: #123c69;
     }
 
-    input,
-    select,
-    textarea {
+    .field input,
+    .field select,
+    .field textarea {
       width: 100%;
       padding: 13px;
       border: 1px solid #d1d5db;
       border-radius: 9px;
       font-size: 15px;
-      font-family: Arial, sans-serif;
+      outline: none;
     }
 
-    textarea {
-      min-height: 100px;
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: #155da8;
+    }
+
+    .field textarea {
+      min-height: 110px;
       resize: vertical;
     }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: #25D366;
+    .submit {
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+      padding: 16px;
+      border-radius: 10px;
+      background: #25d366;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .required {
-      color: #d00;
+    .submit:hover {
+      opacity: 0.9;
     }
 
-    .info {
-      margin-top: 15px;
-      padding: 12px;
-      background: #f0fdf4;
-      border-radius: 9px;
-      font-size: 13px;
-      color: #166534;
+    /* CONTACT */
+
+    .contact {
+      background: #f4f7fb;
     }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .contact-box h3 {
+      color: #123c69;
+      margin-bottom: 12px;
+    }
+
+    .contact-box a {
+      color: #155da8;
+      word-break: break-word;
+    }
+
+    /* FOOTER */
 
     footer {
+      background: #071d35;
+      color: white;
       text-align: center;
-      padding: 30px 20px;
-      color: #666;
-      font-size: 14px;
+      padding: 35px 20px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
+    footer p {
+      margin: 6px 0;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
+      }
+
+      .about-grid,
+      .course-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        min-height: 540px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid img {
+        height: 250px;
       }
 
       .container {
-        padding: 12px;
-      }
-
-      .card {
-        padding: 20px;
+        padding: 50px 15px;
       }
     }
   </style>
@@ -149,141 +538,509 @@
 
 <body>
 
-  <header>
-    <h1>MATRÍCULAS 2026/2027</h1>
-    <p>Inscrições abertas</p>
-  </header>
+<header>
+  <div class="nav">
 
-  <main class="container">
+    <a href="#inicio" class="brand">
+      <img src="logo.jpg" alt="Rosileno Private School Complex">
+      <span>Rosileno Private School Complex</span>
+    </a>
 
-    <section class="card">
-      <h2>Bem-vindo à nossa escola</h2>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#ensino">Ensino</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#pre-inscricao">Pré-Inscrição</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
 
-      <p>
-        Oferecemos um ambiente de aprendizagem seguro,
-        acolhedor e preparado para o desenvolvimento dos nossos alunos.
-      </p>
+  </div>
+</header>
 
-      <a href="#pre-inscricao" class="button register">
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <img
+      src="logo.jpg"
+      alt="Logo da Rosileno Private School Complex"
+      class="hero-logo"
+    >
+
+    <h1>Rosileno Private School Complex</h1>
+
+    <h2>Matrículas 2026/2027</h2>
+
+    <p>
+      Onde o conhecimento se transforma em propósito
+      e o futuro acontece hoje.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#pre-inscricao" class="btn btn-primary">
         FAZER PRÉ-INSCRIÇÃO
       </a>
 
-      <a href="#pre-inscricao" class="button whatsapp">
+      <a
+        href="https://wa.me/244951798418"
+        target="_blank"
+        class="btn btn-secondary"
+      >
         FALAR NO WHATSAPP
       </a>
-    </section>
 
-    <section class="card">
-      <h2>Por que escolher a nossa escola?</h2>
+    </div>
 
-      <p>✓ Educação de qualidade</p>
-      <p>✓ Professores qualificados</p>
-      <p>✓ Ambiente seguro</p>
-      <p>✓ Instalações adequadas</p>
-    </section>
+  </div>
 
-    <section class="card" id="pre-inscricao">
+</section>
 
-      <h2>Pré-Inscrição</h2>
 
-      <p>
-        Preencha os dados abaixo para enviar a sua
-        pré-inscrição através do WhatsApp.
-      </p>
+<!-- SOBRE -->
 
-      <form id="enrollmentForm">
+<section class="about" id="sobre">
 
-        <div class="form-group">
+  <div class="container">
+
+    <h2 class="section-title">Sobre a Nossa Escola</h2>
+
+    <p class="section-subtitle">
+      Um espaço preparado para formar alunos,
+      desenvolver competências e construir o futuro.
+    </p>
+
+    <div class="about-grid">
+
+      <img
+        src="IMG_20260812_175351_586.jpg"
+        alt="Complexo Escolar Privado Rosileno"
+        class="about-image"
+      >
+
+      <div class="about-text">
+
+        <h3>Complexo Escolar Privado Rosileno</h3>
+
+        <p>
+          O Complexo Escolar Privado Rosileno está localizado
+          no município de Kilamba, no bairro Mucula-Ngola,
+          na entrada da Engevia, atrás do Tribunal de Comarca
+          e junto à SNFU.
+        </p>
+
+        <p style="margin-top:15px;">
+          A nossa missão é proporcionar uma educação de qualidade,
+          num ambiente seguro e preparado para o desenvolvimento
+          académico e pessoal dos nossos alunos.
+        </p>
+
+        <div class="quote">
+          “Nada muda no mundo sem o sujeito pensante.”
+          <br><br>
+          <strong>
+            Onde o conhecimento se transforma em propósito
+            e o futuro acontece hoje.
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ENSINO -->
+
+<section id="ensino">
+
+  <div class="container">
+
+    <h2 class="section-title">Níveis de Ensino</h2>
+
+    <p class="section-subtitle">
+      Formação desde a iniciação até ao segundo ciclo do ensino secundário.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="card-icon">📚</div>
+
+        <h3>Ensino Primário</h3>
+
+        <p>
+          Da iniciação à 6ª classe.
+        </p>
+
+        <ul>
+          <li>Iniciação</li>
+          <li>1ª Classe</li>
+          <li>2ª Classe</li>
+          <li>3ª Classe</li>
+          <li>4ª Classe</li>
+          <li>5ª Classe</li>
+          <li>6ª Classe</li>
+        </ul>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🎓</div>
+
+        <h3>Primeiro Ciclo</h3>
+
+        <p>
+          Da 7ª à 9ª classe.
+        </p>
+
+        <ul>
+          <li>7ª Classe</li>
+          <li>8ª Classe</li>
+          <li>9ª Classe</li>
+        </ul>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🏆</div>
+
+        <h3>Segundo Ciclo</h3>
+
+        <p>
+          Da 10ª à 13ª classe.
+        </p>
+
+        <ul>
+          <li>10ª Classe</li>
+          <li>11ª Classe</li>
+          <li>12ª Classe</li>
+          <li>13ª Classe</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CURSOS -->
+
+<section class="courses" id="cursos">
+
+  <div class="container">
+
+    <h2 class="section-title">Cursos Disponíveis</h2>
+
+    <p class="section-subtitle">
+      Formação técnica e cursos no período pós-laboral.
+    </p>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+
+        <h3>💻 Cursos Técnicos</h3>
+
+        <ul>
+          <li>Informática</li>
+          <li>Electricidade</li>
+          <li>Contabilidade e Gestão</li>
+          <li>Sistemas de Informação de Gestão</li>
+          <li>Gestão Empresarial</li>
+          <li>Finanças</li>
+        </ul>
+
+      </div>
+
+
+      <div class="course-card">
+
+        <h3>🌙 Cursos no Período Pós-Laboral</h3>
+
+        <p style="margin-bottom:12px;">
+          No período da noite, a escola oferece cursos nas seguintes áreas:
+        </p>
+
+        <ul>
+          <li>Economia</li>
+          <li>Direito</li>
+          <li>Física</li>
+          <li>Biologia</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INFORMAÇÕES -->
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">Informações Importantes</h2>
+
+    <div class="info-grid">
+
+      <div class="info-box">
+        <strong>📅 Período de Matrículas</strong>
+        29 de Julho de 2026<br>
+        até 30 de Outubro de 2026
+      </div>
+
+      <div class="info-box">
+        <strong>🏫 Início do Ano Lectivo</strong>
+        1 de Setembro de 2026
+      </div>
+
+      <div class="info-box">
+        <strong>💳 Pagamento</strong>
+        A primeira mensalidade é paga
+        durante o processo de matrícula.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DOCUMENTOS -->
+
+<section class="courses">
+
+  <div class="container">
+
+    <h2 class="section-title">Documentos Necessários</h2>
+
+    <p class="section-subtitle">
+      Para concluir o processo, dirija-se à instituição acompanhado dos seguintes documentos:
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📸</div>
+        <h3>Fotografias</h3>
+        <p>4 fotografias tipo passe.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🪪</div>
+        <h3>Documento de Identificação</h3>
+        <p>Fotocópia do documento de identificação.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🩺</div>
+        <h3>Certificado Médico</h3>
+        <p>Apresentar certificado médico.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h3>Saco Plástico</h3>
+        <p>Levar um saco plástico.</p>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:30px;">
+      <strong>Nota:</strong>
+      Os pagamentos são efectuados presencialmente através de cartão de débito.
+      Se a inscrição online não estiver disponível, o processo deverá ser concluído presencialmente na instituição.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- GALERIA -->
+
+<section class="gallery" id="galeria">
+
+  <div class="container">
+
+    <h2 class="section-title">Galeria</h2>
+
+    <p class="section-subtitle">
+      Conheça alguns dos espaços do Complexo Escolar Privado Rosileno.
+    </p>
+
+    <div class="gallery-grid">
+
+      <img src="IMG_20260812_175351_586.jpg" alt="Instalações da escola">
+      <img src="IMG_20260812_175349_122.jpg" alt="Instalações da escola">
+      <img src="IMG_20260812_175346_962.jpg" alt="Instalações da escola">
+      <img src="IMG_20260812_175353_469.jpg" alt="Instalações da escola">
+      <img src="IMG_20260812_175344_807.jpg" alt="Laboratório da escola">
+      <img src="IMG_20260812_175341_831.jpg" alt="Laboratório da escola">
+      <img src="IMG_20260812_175336_245.jpg" alt="Área desportiva da escola">
+      <img src="IMG_20260812_175334_029.jpg" alt="Instalações da escola">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRÉ-INSCRIÇÃO -->
+
+<section class="registration" id="pre-inscricao">
+
+  <div class="container">
+
+    <h2 class="section-title">Pré-Inscrição</h2>
+
+    <p class="section-subtitle">
+      Preencha o formulário abaixo. Ao enviar, o WhatsApp será aberto
+      com a sua pré-inscrição pronta para ser enviada à escola.
+    </p>
+
+    <form class="form" onsubmit="enviarWhatsApp(event)">
+
+      <div class="form-grid">
+
+        <div class="field">
+
           <label for="responsavel">
-            Nome do Responsável <span class="required">*</span>
+            Nome do Encarregado de Educação *
           </label>
 
           <input
             type="text"
             id="responsavel"
-            placeholder="Ex.: Maria Silva"
             required
+            placeholder="Nome do encarregado"
           >
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field">
+
           <label for="aluno">
-            Nome do Aluno <span class="required">*</span>
+            Nome do Aluno *
           </label>
 
           <input
             type="text"
             id="aluno"
-            placeholder="Ex.: João Silva"
             required
+            placeholder="Nome completo do aluno"
           >
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field">
+
           <label for="idade">
-            Idade do Aluno <span class="required">*</span>
+            Idade do Aluno *
           </label>
 
           <input
             type="number"
             id="idade"
-            min="1"
+            min="3"
             max="30"
-            placeholder="Ex.: 8"
             required
+            placeholder="Idade"
           >
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field">
+
           <label for="classe">
-            Classe Pretendida <span class="required">*</span>
+            Classe pretendida *
           </label>
 
           <select id="classe" required>
-            <option value="">Selecione a classe</option>
-            <option value="Iniciação">Iniciação</option>
-            <option value="1ª Classe">1ª Classe</option>
-            <option value="2ª Classe">2ª Classe</option>
-            <option value="3ª Classe">3ª Classe</option>
-            <option value="4ª Classe">4ª Classe</option>
-            <option value="5ª Classe">5ª Classe</option>
-            <option value="6ª Classe">6ª Classe</option>
-            <option value="7ª Classe">7ª Classe</option>
-            <option value="8ª Classe">8ª Classe</option>
-            <option value="9ª Classe">9ª Classe</option>
-            <option value="10ª Classe">10ª Classe</option>
-            <option value="11ª Classe">11ª Classe</option>
-            <option value="12ª Classe">12ª Classe</option>
+
+            <option value="">
+              Seleccione a classe
+            </option>
+
+            <option>Iniciação</option>
+            <option>1ª Classe</option>
+            <option>2ª Classe</option>
+            <option>3ª Classe</option>
+            <option>4ª Classe</option>
+            <option>5ª Classe</option>
+            <option>6ª Classe</option>
+            <option>7ª Classe</option>
+            <option>8ª Classe</option>
+            <option>9ª Classe</option>
+            <option>10ª Classe</option>
+            <option>11ª Classe</option>
+            <option>12ª Classe</option>
+            <option>13ª Classe</option>
+
           </select>
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field">
+
           <label for="telefone">
-            Telefone / WhatsApp <span class="required">*</span>
+            Telefone / WhatsApp *
           </label>
 
           <input
             type="tel"
             id="telefone"
-            placeholder="Ex.: +244 923 000 000"
             required
+            placeholder="+244..."
           >
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field">
+
           <label for="municipio">
-            Município / Região <span class="required">*</span>
+            Município / Região *
           </label>
 
           <input
             type="text"
             id="municipio"
-            placeholder="Ex.: Luanda"
             required
+            placeholder="Ex.: Kilamba"
           >
+
         </div>
 
-        <div class="form-group">
+
+        <div class="field full">
+
           <label for="mensagem">
             Mensagem adicional
           </label>
@@ -292,88 +1049,29 @@
             id="mensagem"
             placeholder="Escreva aqui alguma informação adicional..."
           ></textarea>
+
         </div>
 
-        <button type="submit" class="button whatsapp">
-          ENVIAR PRÉ-INSCRIÇÃO
-        </button>
-
-      </form>
-
-      <div class="info">
-        Ao enviar, o WhatsApp será aberto com os dados
-        da pré-inscrição preparados automaticamente.
       </div>
 
-    </section>
 
-  </main>
+      <button type="submit" class="submit">
+        ENVIAR PRÉ-INSCRIÇÃO PELO WHATSAPP
+      </button>
 
-  <footer>
-    <p>© 2026 Escola — Angola</p>
-    <p>Matrículas 2026/2027</p>
-  </footer>
+    </form>
 
-  <script>
+  </div>
 
-    // Número provisório do WhatsApp da escola.
-    // Será substituído pelo número real posteriormente.
-    const whatsappNumber = "244000000000";
+</section>
 
-    document
-      .getElementById("enrollmentForm")
-      .addEventListener("submit", function(event) {
 
-        event.preventDefault();
+<!-- CONTACTOS -->
 
-        const responsavel =
-          document.getElementById("responsavel").value.trim();
+<section class="contact" id="contactos">
 
-        const aluno =
-          document.getElementById("aluno").value.trim();
+  <div class="container">
 
-        const idade =
-          document.getElementById("idade").value.trim();
+    <h2 class="section-title">Contactos</h2>
 
-        const classe =
-          document.getElementById("classe").value;
-
-        const telefone =
-          document.getElementById("telefone").value.trim();
-
-        const municipio =
-          document.getElementById("municipio").value.trim();
-
-        const mensagemExtra =
-          document.getElementById("mensagem").value.trim();
-
-        let mensagem =
-`Nova Pré-Inscrição
-
-Responsável: ${responsavel}
-Aluno: ${aluno}
-Idade: ${idade}
-Classe: ${classe}
-Telefone: ${telefone}
-Município: ${municipio}`;
-
-        if (mensagemExtra) {
-          mensagem += `
-
-Mensagem adicional: ${mensagemExtra}`;
-        }
-
-        const whatsappURL =
-          "https://wa.me/" +
-          whatsappNumber +
-          "?text=" +
-          encodeURIComponent(mensagem);
-
-        window.location.href = whatsappURL;
-
-      });
-
-  </script>
-
-</body>
-</html>
+    <p class="section-subtitle">
