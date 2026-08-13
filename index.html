@@ -1072,3 +1072,117 @@
     <h2 class="section-title">Contactos</h2>
 
     <p class="section-subtitle">
+
+          Contacte-nos para mais informações sobre matrículas, cursos e pré-inscrições.
+    </p>
+
+    <div class="contact-grid">
+
+      <div class="contact-box">
+        <h3>📞 Telefone</h3>
+        <p>
+          <a href="tel:+244955249850">955 249 850</a>
+        </p>
+        <p>
+          <a href="tel:+244944311863">944 311 863</a>
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>📧 E-mail</h3>
+        <p>
+          <a href="mailto:complexoescolarprivadorosileno@gmail.com">
+            complexoescolarprivadorosileno@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>📱 Redes Sociais</h3>
+
+        <p style="margin-bottom:10px;">
+          <a
+            href="https://www.facebook.com/profile.php?id=61587080123743"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.tiktok.com/@graficarosileno.com?_r=1&_t=ZS-98pcbNcxroz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TikTok
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Complexo Escolar Privado Rosileno</strong>
+  </p>
+
+  <p>
+    Matrículas 2026/2027
+  </p>
+
+  <p>
+    © 2026 Complexo Escolar Privado Rosileno. Todos os direitos reservados.
+  </p>
+
+</footer>
+
+
+<script>
+
+  function enviarWhatsApp(event) {
+
+    event.preventDefault();
+
+    const responsavel = document.getElementById("responsavel").value;
+    const aluno = document.getElementById("aluno").value;
+    const idade = document.getElementById("idade").value;
+    const classe = document.getElementById("classe").value;
+    const telefone = document.getElementById("telefone").value;
+    const municipio = document.getElementById("municipio").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto =
+      "PRÉ-INSCRIÇÃO - COMPLEXO ESCOLAR PRIVADO ROSILENO\n\n" +
+      "Nome do Encarregado: " + responsavel + "\n" +
+      "Nome do Aluno: " + aluno + "\n" +
+      "Idade: " + idade + "\n" +
+      "Classe pretendida: " + classe + "\n" +
+      "Telefone / WhatsApp: " + telefone + "\n" +
+      "Município / Região: " + municipio + "\n" +
+      "Mensagem adicional: " + mensagem;
+
+    const numero = "244951798418";
+
+    const url =
+      "https://wa.me/" +
+      numero +
+      "?text=" +
+      encodeURIComponent(texto);
+
+    window.open(url, "_blank");
+  }
+
+</script>
+
+</body>
+</html>
